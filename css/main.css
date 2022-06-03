@@ -1,0 +1,221 @@
+/*
+Table of contents
+
+1. Variables
+2. Typography
+3. Layout
+	3.0 Components 
+		3.0.1 Controls
+		3.0.2 Cards
+	3.1 Header Navigation
+	3.2 Filter
+	3.3 Hosting section
+		3.3.1 hosting__location
+		3.3.2 hosting__popular
+	3.4 Activities
+	3.5 Footer
+
+
+*/
+
+/* 1. Variables */
+
+html {
+  --brand-color: #0065fc;
+  --accent-color: #deebff;
+  --background-color: #f2f2f2;
+  --light-color: #ffffff;
+  --rounded: 20px;
+}
+
+/* 2. Typography */
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+}
+h2 {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+}
+h3 {
+  font-size: 20pxpx;
+  font-weight: 700;
+  margin: 0;
+}
+h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+p {
+  font-size: 10px;
+  margin: 0;
+}
+
+.rating {
+  line-height: 10px;
+}
+.rating .fa-star {
+  font-size: 10px;
+  color: var(--background-color);
+}
+.rating .fa-star.checked {
+  color: var(--brand-color);
+}
+
+/* 3. Layout */
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.container {
+  max-width: 1340px;
+  width: 1340px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+/* 3.0 Components */
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.rounded {
+  border-radius: var(--rounded);
+}
+
+/* 3.0.1 Controls */
+
+/* 3.0.2 Cards */
+.card {
+  overflow: hidden;
+  background-color: var(--light-color);
+  box-shadow: 0 10px 10px 0 rgb(0 0 0 / 10%);
+  display: flex;
+}
+.card > div {
+  box-sizing: border-box;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 5px;
+}
+
+.card.top {
+  padding: 5px;
+  flex-direction: column;
+  max-height: 200px;
+}
+.card.top > picture {
+  height: 115px;
+}
+.card.top > picture > img {
+  border-radius: 20px 20px 0 0;
+}
+
+.card.left img {
+  border-radius: 20px 0 0 20px;
+}
+
+/* 3.1 Header Navigation */
+#navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#navbar .logo {
+  width: 60px;
+}
+#navbar ul#navMenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#navbar li.nav__item a.nav__link {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 50px 28px;
+}
+
+/*	3.2 Filter */
+/*	3.3 Hosting section */
+#hosting {
+  box-sizing: border-box;
+  display: flex;
+  gap: 40px;
+}
+#hosting > article#hosting__location {
+  width: 65.67%;
+  flex-grow: 1;
+}
+#hosting > aside#hosting__popular {
+  width: 34.33%;
+  flex-grow: 1;
+}
+
+/*	3.3.1 hosting__location */
+#hosting__location {
+  box-sizing: border-box;
+  padding: 40px;
+  background-color: var(--background-color);
+}
+#location__container {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+#location__container > article.card {
+  flex: 1 0 25%;
+}
+
+/*	3.3.2 hosting__popular */
+#hosting__popular {
+  box-sizing: border-box;
+  padding: 40px;
+  background-color: var(--background-color);
+}
+#popular__container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/*	3.4 Activities */
+/*	3.5 Footer */
+footer {
+  background: var(--background-color);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
