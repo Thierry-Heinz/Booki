@@ -1,3 +1,176 @@
+/*
+  Stylesheet fro screen less than 768px
+
+
+*/
+
 body {
-  background-color: green;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+main {
+  gap: 0px;
+}
+
+/* Components */
+.card.allOver {
+  height: 200px !important;
+}
+
+/* Header */
+header#navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+header#navbar nav,
+header#navbar nav ul#navMenu,
+header#navbar nav ul#navMenu li.nav__item {
+  width: 100%;
+}
+header#navbar li.nav__item a.nav__link {
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  color: var(--dark-color);
+  border-top: none;
+  border-bottom: 3px solid var(--background-color);
+  padding: 20px 0px;
+}
+header#navbar li.nav__item a.nav__link:hover {
+  color: var(--brand-color);
+  border-bottom: 3px solid var(--brand-color);
+  border-top: none;
+}
+
+/* Title */
+main#main-content > header {
+  margin: 20px 20px 0 20px;
+}
+main#main-content > header > h1 {
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+main#main-content > header > h2 {
+  font-size: 16px;
+}
+
+/* Controls */
+section#controls mark {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+section#controls mark i {
+  font-size: 15px;
+  padding: 5px;
+}
+section#controls mark span {
+  font-size: 15px;
+}
+
+section#controls #toolbar {
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Search Bar */
+section#controls #toolbar form#search-bar {
+  width: 100%;
+  position: relative;
+}
+section#controls #toolbar form#search-bar input {
+  flex-grow: 1;
+  margin-right: 10px;
+  width: 90%;
+}
+section#controls #toolbar form#search-bar button {
+  border-radius: 15px;
+  position: absolute;
+  right: 0;
+}
+section#controls #toolbar form#search-bar button span {
+  display: none;
+}
+
+/* Filter */
+section#controls #toolbar #filter {
+  flex-wrap: wrap;
+  gap: 15px;
+}
+section#controls #toolbar #filter h3 {
+  width: 100%;
+  font-size: 24px;
+}
+section#controls #toolbar #filter label.custom-checkbox {
+  font-size: 13px;
+}
+
+section#controls #toolbar #filter label.custom-checkbox .text-container i {
+  padding: 14px;
+  min-width: 32px;
+}
+
+section#controls #toolbar #filter label.custom-checkbox .text-container span {
+  padding-left: 56px;
+}
+
+/* Hosting Section */
+#hosting {
+  gap: 0px;
+  flex-direction: column;
+}
+
+/* Location */
+#hosting > article#hosting__location {
+  width: 100%;
+  order: 2;
+  border-radius: 0;
+  background-color: var(--light-color);
+}
+#hosting > article#hosting__location button {
+  background-color: var(--light-color);
+}
+#location__container > article.card {
+  flex: 1 0 100%;
+}
+
+/* Popular */
+#hosting > aside#hosting__popular {
+  width: 100%;
+  order: 1;
+  border-radius: 0;
+  padding: 35px 20px 35px 20px;
+}
+
+/* Activities */
+section#activities {
+  padding: 40px;
+}
+section#activities #activities__container {
+  height: min-content;
+}
+section#activities #activities__container > article.card {
+  width: 100%;
+}
+
+/* Footer */
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 40px;
+}
+footer .container .col {
+  width: 100%;
+  margin-bottom: 20px;
 }
