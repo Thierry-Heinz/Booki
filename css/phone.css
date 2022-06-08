@@ -1,5 +1,5 @@
 /*
-  Stylesheet fro screen less than 768px
+  Stylesheet for screen less than 768px
 
 
 */
@@ -141,7 +141,7 @@ section#controls #toolbar #filter label.custom-checkbox .text-container span {
   flex-direction: column;
 }
 
-/* Location */
+/* #hosting__location */
 #hosting > article#hosting__location {
   width: 100%;
   order: 2;
@@ -155,7 +155,7 @@ section#controls #toolbar #filter label.custom-checkbox .text-container span {
   flex: 1 0 100%;
 }
 
-/* Popular */
+/* #hosting__popular */
 #hosting > aside#hosting__popular {
   width: 100%;
   order: 1;
@@ -163,7 +163,7 @@ section#controls #toolbar #filter label.custom-checkbox .text-container span {
   padding: 35px 20px 35px 20px;
 }
 
-/* Activities */
+/* Activities Section */
 section#activities {
   padding: 40px;
 }

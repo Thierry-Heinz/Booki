@@ -1,3 +1,71 @@
-body {
-  background-color: red;
+/*
+  Stylesheet for screen less than 992px and more than 768px
+
+*/
+
+/* Components */
+
+/* card left */
+.card.left {
+  padding: 5px;
+  flex-direction: column;
+  height: 230px;
+  flex: 1 0 29%;
+}
+.card.left .img-card {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  height: calc(2 / 3 * 100%);
+}
+.card.left .card-content {
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 5px;
+  min-height: 105px;
+}
+
+/* card allOver */
+
+.card.allOver.small {
+  height: 140px;
+}
+.card.allOver.big {
+  height: 310px;
+}
+.card.allOver .card-content {
+  padding: 10px;
+}
+
+/* Filter */
+section#controls #toolbar #filter {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Hosting Section */
+#hosting {
+  flex-direction: column;
+}
+#hosting > article#hosting__location {
+  width: 100%;
+  order: 2;
+}
+#hosting > aside#hosting__popular {
+  width: 100%;
+  order: 1;
+}
+
+/* #hosting__popular */
+aside#hosting__popular header {
+  justify-content: flex-start;
+  gap: 10px;
+}
+#popular__container {
+  flex-direction: row;
+}
+
+/* Activities section */
+section#activities #activities__container {
+  height: 360px;
 }
