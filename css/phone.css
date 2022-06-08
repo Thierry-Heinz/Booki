@@ -101,10 +101,16 @@ section#controls #toolbar form#search-bar button {
 section#controls #toolbar form#search-bar button span {
   display: none;
 }
+section#controls #toolbar form#search-bar button i {
+  display: inline;
+}
 
 /* Filter */
 section#controls #toolbar #filter {
   flex-wrap: wrap;
+  gap: 15px;
+}
+section#controls #toolbar #filter .filter__container {
   gap: 15px;
 }
 section#controls #toolbar #filter h3 {
@@ -113,14 +119,19 @@ section#controls #toolbar #filter h3 {
 }
 section#controls #toolbar #filter label.custom-checkbox {
   font-size: 13px;
+  height: 49px;
 }
 
 section#controls #toolbar #filter label.custom-checkbox .text-container i {
   padding: 14px;
   min-width: 32px;
+  min-height: 32px;
 }
 
 section#controls #toolbar #filter label.custom-checkbox .text-container span {
+  padding-top: 14px;
+  padding-right: 14px;
+  padding-bottom: 14px;
   padding-left: 56px;
 }
 

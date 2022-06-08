@@ -274,6 +274,9 @@ section#controls #toolbar form#search-bar button {
   min-height: 100%;
   border-radius: 0 15px 15px 0;
 }
+section#controls #toolbar form#search-bar button i {
+  display: none;
+}
 section#controls #toolbar form#search-bar button:hover,
 section#controls #toolbar form#search-bar button:active,
 section#controls #toolbar form#search-bar button:focus {
@@ -291,45 +294,65 @@ section#controls #toolbar #filter {
   gap: 20px;
 }
 
-section#controls #toolbar #filter label.custom-checkbox {
-  cursor: pointer;
+section#controls #toolbar #filter .filter__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
-section#controls #toolbar #filter label.custom-checkbox input[type="checkbox"] {
+
+section#controls #toolbar .filter__container label.custom-checkbox {
+  cursor: pointer;
+  height: 64px;
+}
+section#controls
+  #toolbar
+  .filter__container
+  label.custom-checkbox
+  input[type="checkbox"] {
   display: none;
 }
-section#controls #toolbar #filter label.custom-checkbox .text-container {
+section#controls
+  #toolbar
+  .filter__container
+  label.custom-checkbox
+  .text-container {
   box-sizing: border-box;
-  padding: 16px 0px 16px 16px;
   position: relative;
+  display: flex;
+  align-items: baseline;
 }
-section#controls #toolbar #filter label.custom-checkbox i {
+section#controls #toolbar .filter__container label.custom-checkbox i {
   box-sizing: border-box;
-  padding: 16px;
+  padding: 18px;
   position: absolute;
   top: 0;
   left: 0;
   border-radius: 32px;
   min-width: 64px;
+  z-index: 50;
+  min-height: 64px;
   text-align: center;
   background-color: var(--accent-color);
   color: var(--brand-color);
   border: 3px solid var(--accent-color);
+  z-index: 5;
 }
-section#controls #toolbar #filter label.custom-checkbox span {
-  box-sizing: border-box;
+section#controls #toolbar .filter__container label.custom-checkbox span {
+  box-sizing: content-box;
   font-weight: 700;
-  padding-top: 14px;
-  padding-right: 16px;
-  padding-bottom: 14px;
-  padding-left: 58px;
+  padding-top: 18px;
+  padding-right: 18px;
+  padding-bottom: 18px;
+  padding-left: 74px;
   border-radius: 32px;
-  /* background-color: var(--light-color); */
   border: 3px solid var(--background-color);
 }
 
 section#controls
   #toolbar
-  #filter
+  .filter__container
   label.custom-checkbox
   input:checked
   + .text-container
@@ -340,7 +363,7 @@ section#controls
 }
 section#controls
   #toolbar
-  #filter
+  .filter__container
   label.custom-checkbox
   input:checked
   + .text-container
