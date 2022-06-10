@@ -52,7 +52,7 @@
         </picture>
       </div>
       <nav>
-        <ul id="navMenu" role="navigation">
+        <ul id="navMenu">
           <li class="nav__item">
             <a class="nav__link" href="#hosting">Hébergements</a>
           </li>
@@ -75,7 +75,7 @@
       <section id="controls">
         <!-- Begin ToolBar -->
         <div id="toolbar" role="toolbar">
-          <form id="search-bar" action="">
+          <form id="search-bar">
             <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
             <input type="text" placeholder="Marseille, France" />
             <button>
@@ -88,34 +88,30 @@
           <div id="filter">
             <h3>Filtres</h3>
             <div class="filter__container">
-              <label for="economic" class="custom-checkbox">
-                <input id="economic" type="checkbox" />
+              <a class="economic filter__link">
                 <div class="text-container">
                   <i class="fa-solid fa-money-bill-1-wave"></i>
                   <span>Économique</span>
                 </div>
-              </label>
-              <label for="familly" class="custom-checkbox">
-                <input id="familly" type="checkbox" />
+              </a>
+              <a class="family filter__link">
                 <div class="text-container">
                   <i class="fa-solid fa-child-reaching"></i>
                   <span>Familial</span>
                 </div>
-              </label>
-              <label for="romance" class="custom-checkbox">
-                <input id="romance" type="checkbox" />
+              </a>
+              <a class="romance filter__link">
                 <div class="text-container">
                   <i class="fa-solid fa-heart"></i>
                   <span>Romantique</span>
                 </div>
-              </label>
-              <label for="animals" class="custom-checkbox">
-                <input id="animals" type="checkbox" />
+              </a>
+              <a class="animals filter__link">
                 <div class="text-container">
                   <i class="fa-solid fa-dog"></i>
                   <span>Animaux autorisés</span>
                 </div>
-              </label>
+              </a>
             </div>
           </div>
           <!-- End Filter -->
@@ -130,7 +126,7 @@
       <!-- End section#controls -->
 
       <!-- Begin section#hosting -->
-      <section id="hosting">
+      <div id="hosting">
         <!-- Begin hosting__location -->
         <article id="hosting__location">
           <header>
@@ -448,7 +444,7 @@
                   ><i class="fa-solid fa-star checked"></i
                   ><i class="fa-solid fa-star checked"></i
                   ><i class="fa-solid fa-star checked"></i
-                  ><i class="fa-solid fa-star checked"></i>
+                  ><i class="fa-solid fa-star"></i>
                 </div>
               </div>
             </article>
@@ -486,14 +482,14 @@
                   ><i class="fa-solid fa-star checked"></i
                   ><i class="fa-solid fa-star checked"></i
                   ><i class="fa-solid fa-star checked"></i
-                  ><i class="fa-solid fa-star checked"></i>
+                  ><i class="fa-solid fa-star"></i>
                 </div>
               </div>
             </article>
           </div>
         </aside>
         <!-- End hosting__popular -->
-      </section>
+      </div>
       <!-- End section#hosting -->
 
       <!-- Begin section#activities -->

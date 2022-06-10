@@ -3,21 +3,31 @@
 
 */
 
+:root {
+  --big-card: 250px;
+  --small-card: 110px;
+  --left-card: 230px;
+}
+
 /* Components */
 
 /* card left */
+.card.top,
 .card.left {
   padding: 5px;
   flex-direction: column;
-  height: 230px;
+  height: var(--left-card);
   flex: 1 0 29%;
 }
+.card.top .img-card,
 .card.left .img-card {
   width: 100%;
   border-radius: 20px 20px 0 0;
   overflow: hidden;
   height: calc(2 / 3 * 100%);
 }
+
+.card.top .card-content,
 .card.left .card-content {
   width: 100%;
   justify-content: space-between;
@@ -28,10 +38,10 @@
 /* card allOver */
 
 .card.allOver.small {
-  height: 140px;
+  height: var(--small-card);
 }
 .card.allOver.big {
-  height: 310px;
+  height: var(--big-card);
 }
 .card.allOver .card-content {
   padding: 10px;
@@ -67,5 +77,5 @@ aside#hosting__popular header {
 
 /* Activities section */
 section#activities #activities__container {
-  height: 360px;
+  height: var(--big-card);
 }

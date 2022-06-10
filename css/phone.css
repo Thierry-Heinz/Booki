@@ -4,9 +4,6 @@
 
 */
 
-body {
-}
-
 .container {
   width: 100%;
   max-width: 100%;
@@ -16,9 +13,24 @@ main {
   gap: 0px;
 }
 
+/* Typography */
+h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 30px 0;
+}
+
+.rating {
+  line-height: 12px;
+}
+.rating .fa-star {
+  font-size: 12px;
+  color: var(--background-color);
+}
+
 /* Components */
 .card.allOver {
-  height: 200px !important;
+  height: var(--small-card) !important;
 }
 
 /* Header */
@@ -27,6 +39,8 @@ header#navbar {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin-top: 40px;
+  gap: 10px;
 }
 header#navbar nav,
 header#navbar nav ul#navMenu,
@@ -53,7 +67,7 @@ header#navbar li.nav__item a.nav__link:hover {
 
 /* Title */
 main#main-content > header {
-  margin: 20px 20px 0 20px;
+  margin: 40px 20px 0 20px;
 }
 main#main-content > header > h1 {
   font-size: 23px;
@@ -117,18 +131,18 @@ section#controls #toolbar #filter h3 {
   width: 100%;
   font-size: 24px;
 }
-section#controls #toolbar #filter label.custom-checkbox {
-  font-size: 13px;
+section#controls #toolbar #filter a.filter__link {
+  font-size: 16px;
   height: 49px;
 }
 
-section#controls #toolbar #filter label.custom-checkbox .text-container i {
+section#controls #toolbar #filter a.filter__link .text-container i {
   padding: 14px;
-  min-width: 32px;
-  min-height: 32px;
+  min-width: 52px;
+  min-height: 52px;
 }
 
-section#controls #toolbar #filter label.custom-checkbox .text-container span {
+section#controls #toolbar #filter a.filter__link .text-container span {
   padding-top: 14px;
   padding-right: 14px;
   padding-bottom: 14px;
@@ -147,6 +161,7 @@ section#controls #toolbar #filter label.custom-checkbox .text-container span {
   order: 2;
   border-radius: 0;
   background-color: var(--light-color);
+  padding: 35px;
 }
 #hosting > article#hosting__location button {
   background-color: var(--light-color);
@@ -183,5 +198,5 @@ footer .container {
 }
 footer .container .col {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }

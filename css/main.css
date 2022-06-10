@@ -22,13 +22,16 @@ Table of contents
 
 /* 1. Variables */
 
-html {
+:root {
   --brand-color: #0065fc;
   --accent-color: #deebff;
   --background-color: #f2f2f2;
   --light-color: #ffffff;
   --dark-color: #000000;
   --rounded: 20px;
+  --big-card: 430px;
+  --small-card: 200px;
+  --left-card: 150px;
 }
 
 /* 2. Typography */
@@ -41,7 +44,7 @@ body {
 h1 {
   font-size: 30px;
   font-weight: 700;
-  margin: 0;
+  margin: 0 0 10px 0;
 }
 h2 {
   font-size: 20px;
@@ -51,7 +54,7 @@ h2 {
 h3 {
   font-size: 20px;
   font-weight: 700;
-  margin: 0;
+  margin: 0 0 20px 0;
 }
 h4 {
   font-size: 16px;
@@ -59,9 +62,9 @@ h4 {
   margin: 0 0 5px 0;
 }
 h5 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
-  margin: 0 0 15px 0;
+  margin: 0 0 20px 0;
 }
 p {
   font-size: 14px;
@@ -97,9 +100,10 @@ main {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  margin-bottom: 70px;
 }
-/* 3.0 Components */
 
+/* 3.0 Components */
 img {
   width: 100%;
   height: 100%;
@@ -130,7 +134,7 @@ img {
 .card.top {
   padding: 5px;
   flex-direction: column;
-  height: 200px;
+  height: var(--small-card);
 }
 .card.top .img-card {
   border-radius: 20px 20px 0 0;
@@ -141,7 +145,7 @@ img {
 .card.left {
   padding: 5px;
   flex-direction: row;
-  height: 150px;
+  height: var(--left-card);
 }
 .card.left .img-card {
   width: calc(2 / 5 * 100%);
@@ -159,10 +163,10 @@ img {
   justify-content: space-between;
 }
 .card.allOver.small {
-  height: 200px;
+  height: var(--small-card);
 }
 .card.allOver.big {
-  height: 430px;
+  height: var(--big-card);
 }
 .card.allOver .img-card {
   height: calc(100% - 50px);
@@ -293,6 +297,9 @@ section#controls #toolbar #filter {
   align-items: center;
   gap: 20px;
 }
+section#controls #toolbar #filter h3 {
+  margin: 0;
+}
 
 section#controls #toolbar #filter .filter__container {
   display: flex;
@@ -302,28 +309,24 @@ section#controls #toolbar #filter .filter__container {
   flex-wrap: wrap;
 }
 
-section#controls #toolbar .filter__container label.custom-checkbox {
+section#controls #toolbar .filter__container a.filter__link {
   cursor: pointer;
   height: 64px;
 }
 section#controls
   #toolbar
   .filter__container
-  label.custom-checkbox
+  a.filter__link
   input[type="checkbox"] {
   display: none;
 }
-section#controls
-  #toolbar
-  .filter__container
-  label.custom-checkbox
-  .text-container {
+section#controls #toolbar .filter__container a.filter__link .text-container {
   box-sizing: border-box;
   position: relative;
   display: flex;
   align-items: baseline;
 }
-section#controls #toolbar .filter__container label.custom-checkbox i {
+section#controls #toolbar .filter__container a.filter__link i {
   box-sizing: border-box;
   padding: 18px;
   position: absolute;
@@ -339,7 +342,7 @@ section#controls #toolbar .filter__container label.custom-checkbox i {
   border: 3px solid var(--accent-color);
   z-index: 5;
 }
-section#controls #toolbar .filter__container label.custom-checkbox span {
+section#controls #toolbar .filter__container a.filter__link span {
   box-sizing: content-box;
   font-weight: 700;
   padding-top: 18px;
@@ -353,9 +356,20 @@ section#controls #toolbar .filter__container label.custom-checkbox span {
 section#controls
   #toolbar
   .filter__container
-  label.custom-checkbox
-  input:checked
-  + .text-container
+  a.filter__link:hover
+  .text-container
+  i,
+section#controls
+  #toolbar
+  .filter__container
+  a.filter__link:focus
+  .text-container
+  i,
+section#controls
+  #toolbar
+  .filter__container
+  a.filter__link:active
+  .text-container
   i {
   background-color: var(--brand-color);
   color: var(--light-color);
@@ -364,9 +378,20 @@ section#controls
 section#controls
   #toolbar
   .filter__container
-  label.custom-checkbox
-  input:checked
-  + .text-container
+  a.filter__link:hover
+  .text-container
+  span,
+section#controls
+  #toolbar
+  .filter__container
+  a.filter__link:focus
+  .text-container
+  span,
+section#controls
+  #toolbar
+  .filter__container
+  a.filter__link:active
+  .text-container
   span {
   background-color: var(--brand-color);
   color: var(--light-color);
@@ -440,16 +465,13 @@ aside#hosting__popular header {
 }
 
 /*	3.5 Activities Section */
-section#activities h3 {
-  margin-bottom: 20px;
-}
 
 section#activities #activities__container {
   display: flex;
   flex-flow: column wrap;
   gap: 30px;
   flex: 1 0 25%;
-  height: 470px;
+  height: var(--big-card);
   align-content: space-between;
 }
 section#activities #activities__container > article.card {
@@ -467,8 +489,8 @@ footer .container {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 70px;
+  padding-bottom: 80px;
   margin: auto;
 }
 footer .container .col {
@@ -486,7 +508,7 @@ footer .container ul.footerMenu li.menu__item a {
   color: var(--dark-color);
 }
 footer .container ul.footerMenu li.menu__item {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 footer .container ul.footerMenu li.menu__item a:hover,
 footer .container ul.footerMenu li.menu__item a:focus,
